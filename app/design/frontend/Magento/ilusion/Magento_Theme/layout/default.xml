@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+
+        <referenceContainer name="footer-container">
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" template="Magento_Store::switch/stores.phtml"/>
+
+                <block class="Magento\Cms\Block\Block" name="footeroptions">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer_options</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" after="-" template="Magento_Newsletter::subscribe.phtml"/>
+
+                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
+
+            </container>
+        </referenceContainer>
+
+    </body>
+</page>
