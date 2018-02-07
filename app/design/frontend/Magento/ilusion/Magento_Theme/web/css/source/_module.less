@@ -216,6 +216,61 @@
             border-top: 1px solid @footer-links-separator-border-color;
             padding-top: @indent__base;
 
+
+            ////////////////////////////////////////////////////////////////////////
+            .row {
+                display: inline-block;
+                .column {
+                    //float: left;
+                    h4 {
+                        color: #7e0c6e;
+                        font-size: 1.2rem;
+                    }
+                    ul {
+                        li {
+                            padding: 5px 0px;
+
+                            a {
+                                color: #858585;
+                                font-size: 1.2rem;
+                            }
+                            label {
+                                color: #858585;
+                                font-size: 1.2rem;
+                            }
+                        }
+                        .icon {
+                            float: left;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            div.block.newsletter {
+              float: none;
+            }
+
+            .newsletter {
+                .content {
+                    .subscribe {
+                        width: 50%;
+                        .image-subscribe {
+                            background-image: url("../images/check.png");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center center;
+                            .action {
+                                background-color: transparent;
+                                height: 34px;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+            /////////////////////////////////////////////////////////////////////////
+
             ul:extend(.abs-reset-list all) {
             }
 
@@ -252,8 +307,50 @@
                     );
                 }
             }
+
         }
     }
+
+
+
+
+  //Anadido
+  ///////////////////////////////////////////
+
+  //.row {
+  //  display: inline-block;
+  //}
+  //.column {
+  //  float: left;
+  //  margin-left: 30px;
+  //}
+  //h4 {
+  //  color: #7e0c6e;
+  //  font-size: 1.2rem;
+  //}
+  //a {
+  //  color: #858585;
+  //  font-size: 1.2rem;
+  //}
+  //label {
+  //  color: #858585;
+  //  font-size: 1.2rem;
+  //}
+  //.icon {
+  //  float: left;
+  //  margin-left: 15px;
+  //}
+  //
+  //.image-subscribe {
+  //  background-image: url("../images/check.png");
+  //  .action {
+  //    background-color: transparent;
+  //  }
+  //}
+
+
+
+  ///////////////////////////////////////////
 
 
     .copyright {
@@ -262,6 +359,21 @@
         display: block;
         padding: @indent__s;
         text-align: center;
+        background-color: #ede1ea;
+        font-size: 10px;
+        margin-bottom: 10px;
+
+        .security {
+          float: left;
+        }
+      
+        span {
+          color: #84256c;
+        }
+
+        .credit-cards {
+          float: right;
+        }
     }
 
     .page-header,
@@ -664,44 +776,6 @@
             .block {
                 float: right;
             }
-
-            //Anadido
-            ///////////////////////////////////////////
-
-            .row {
-                display: inline-block;
-            }
-            .column {
-                float: left;
-                margin-left: 30px;
-            }
-            h4 {
-                color: #7e0c6e;
-                font-size: 1.2rem;
-            }
-            a {
-                color: #858585;
-                font-size: 1.2rem;
-            }
-            label {
-                color: #858585;
-                font-size: 1.2rem;
-            }
-            .icon {
-                float: left;
-                margin-left: 15px;
-            }
-
-            .image-subscribe {
-                background-image: url("../images/check.png");
-                .action {
-                    background-color: transparent;
-                }
-            }
-
-
-
-            ///////////////////////////////////////////
 
             ul {
                 padding-right: 50px;
