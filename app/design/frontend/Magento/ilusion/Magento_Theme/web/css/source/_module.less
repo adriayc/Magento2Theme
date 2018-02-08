@@ -209,19 +209,28 @@
 
     .page-footer {
         margin-top: @indent__m;
+
+        margin: 0px auto;
     }
 
     .footer {
+        //margin: 0px auto;
         &.content {
             border-top: 1px solid @footer-links-separator-border-color;
             padding-top: @indent__base;
 
 
             ////////////////////////////////////////////////////////////////////////
+            overflow: hidden;
+            //margin: 0px auto;
+            display: inline;
             .row {
-                display: inline-block;
+                display: inline-table;
+                overflow: hidden;
+
+                float: left;
                 .column {
-                    //float: left;
+                    float: left;
                     h4 {
                         color: #7e0c6e;
                         font-size: 1.2rem;
@@ -248,7 +257,9 @@
             }
 
             div.block.newsletter {
-              float: none;
+                float: none;
+                //display: inline;
+                width: 150%;
             }
 
             .newsletter {
@@ -313,46 +324,6 @@
 
 
 
-
-  //Anadido
-  ///////////////////////////////////////////
-
-  //.row {
-  //  display: inline-block;
-  //}
-  //.column {
-  //  float: left;
-  //  margin-left: 30px;
-  //}
-  //h4 {
-  //  color: #7e0c6e;
-  //  font-size: 1.2rem;
-  //}
-  //a {
-  //  color: #858585;
-  //  font-size: 1.2rem;
-  //}
-  //label {
-  //  color: #858585;
-  //  font-size: 1.2rem;
-  //}
-  //.icon {
-  //  float: left;
-  //  margin-left: 15px;
-  //}
-  //
-  //.image-subscribe {
-  //  background-image: url("../images/check.png");
-  //  .action {
-  //    background-color: transparent;
-  //  }
-  //}
-
-
-
-  ///////////////////////////////////////////
-
-
     .copyright {
         .lib-css(background-color, @copyright__background-color);
         .lib-css(color, @color-white);
@@ -361,7 +332,7 @@
         text-align: center;
         background-color: #ede1ea;
         font-size: 10px;
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
 
         .security {
           float: left;
