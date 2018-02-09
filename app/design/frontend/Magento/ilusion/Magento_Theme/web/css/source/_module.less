@@ -75,7 +75,14 @@
     //  Header
     //  ---------------------------------------------
 
+    footer {
+        &.page-header {
+            border-bottom: 1px solid #860D6B;
+        }
+    }
+
     .page-header {
+
         .lib-css(background-color, @header__background-color);
         border-bottom: 1px solid @border-color__base;
         margin-bottom: @indent__base;
@@ -118,6 +125,43 @@
         &.content:extend(.abs-add-clearfix all) {
             padding-top: @indent__s;
             position: relative;
+
+          .header {
+            &.links {
+              float: right;
+              display: inline-flex;
+              list-style: none;
+
+              .greet {
+                &.welcome {
+                  display: none;
+                }
+              }
+
+              li {
+                border-right: 1px solid rgba(126,12,110,0.2);
+                a {
+                  color: #7e0c6e;
+                  padding: 0 12px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+            .logo {
+                float: none;
+                img {
+                    display: inline-block;
+                }
+            }
+            select {
+                width: 20%;
+                float: left;
+
+                border: none;
+                color: #bb3d8c;
+                text-transform: uppercase;
+            }
         }
     }
 
@@ -211,6 +255,7 @@
         margin-top: @indent__m;
 
         margin: 0px auto;
+        background: #fff;
     }
 
     .footer {
