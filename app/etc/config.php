@@ -118,6 +118,7 @@ return array (
     'Magento_CatalogWidget' => 1,
     'Dotdigitalgroup_Email' => 1,
     'Magento_WishlistAnalytics' => 1,
+    'Mega_Menu' => 1,
     'Shopial_Facebook' => 1,
     'Temando_Shipping' => 1,
     'Unit1_HelloWorld' => 1,
