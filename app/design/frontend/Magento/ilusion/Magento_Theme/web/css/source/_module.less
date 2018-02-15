@@ -75,9 +75,11 @@
     //  Header
     //  ---------------------------------------------
 
-    footer {
+    header {
         &.page-header {
             border-bottom: 1px solid #860D6B;
+
+            height: 100px;
         }
     }
 
@@ -126,11 +128,16 @@
             padding-top: @indent__s;
             position: relative;
 
+            height: inherit;
+
           .header {
             &.links {
               float: right;
               display: inline-flex;
               list-style: none;
+
+                position: relative;
+                top: -80px;
 
               .greet {
                 &.welcome {
@@ -150,18 +157,83 @@
           }
             .logo {
                 float: none;
+                text-align: center;
+                display: block;
+                max-width: 100%;
+
+                z-index: 0;
+
                 img {
                     display: inline-block;
                 }
             }
-            select {
+
+            .minicart-wrapper {
+                position: relative;
+                top: -85px;
+                .showcart {
+                    background-image: url("../images/bag.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                    &:hover {
+                        background-image: url("../images/bag_hover.png");
+                    }
+                }
+            }
+
+            .block-search {
+                position: relative;
+                width: 171px;
+                top: -85px;
+                .block-content {
+                    form {
+                        .search {
+                            .control {
+                                input {
+                                    border: none;
+                                    border-bottom: 1px solid #860D6B;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .client-expert {
                 width: 20%;
-                float: left;
+                //float: left;
 
                 border: none;
                 color: #bb3d8c;
                 text-transform: uppercase;
-            }
+                font-weight: bold;
+
+                position: relative;
+                top: -85px;
+                z-index: 20000;
+                &>ul {
+                    display: none;
+                    list-style: none;
+                    border: 2px solid #c2c2c2;
+                    padding: 5px;
+                }
+                &:hover > ul {
+                    display: block;
+                    background: #C73B89;
+                    border-top: 1px solid #c2c2c2;
+                }
+                &:hover > ul > li { padding: 5px; }
+                &:hover > ul > li:hover { background: none }
+                &:hover > ul > li > a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: normal;
+                }
+                &:hover > ul > li:hover a {
+                    color: rgba(255,255,255,0.3);
+                }
+             }
         }
     }
 
@@ -247,6 +319,49 @@
         }
     }
 
+
+    //
+    //  Menu
+    //-----------------------------------------------
+    .nav-sections {
+        .nav-sections-item-content {
+            background: #fff;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.19);
+            .navigation {
+                background: inherit;
+                text-align: center;
+                ul.ui-menu {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    li.level0 {
+                        a {
+                            color: #7e0c6e;
+                            text-transform: uppercase;
+                            &:hover {
+                                color: #e980a9;
+                            }
+                        }
+                        ul.submenu {
+                            display: none;
+                            li.level1 {
+                                a {
+                                    color: #575757;
+                                    text-transform: capitalize;
+                                    &:hover {
+                                        color: #7e0c6e;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
     //
     //  Footer
     //  ---------------------------------------------
@@ -296,6 +411,12 @@
                         .icon {
                             float: left;
                             margin-left: 15px;
+                            &:hover {
+                                background-image: url("../images/check.png");
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center center;
+                            }
                         }
                     }
                 }
@@ -321,6 +442,7 @@
                                 height: 34px;
                                 border: none;
                             }
+
                         }
                     }
                 }
